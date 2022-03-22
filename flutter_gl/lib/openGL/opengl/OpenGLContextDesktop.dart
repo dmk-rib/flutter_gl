@@ -492,7 +492,8 @@ class OpenGLContextDesktop extends OpenGL30Constant {
     calloc.free(dataPtr);
   }
 
-  texSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth,
+  texSubImage3D(target, level, xoffset, yoffset, zoffset, int width, int height,
+      depth,
       format, type, pixels) {
     return glTexSubImage3D(target, level, xoffset, yoffset, zoffset, width,
         height, depth, format, type, getData(pixels));
